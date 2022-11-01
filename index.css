@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Walter+Turncoat&display=swap');
+
+/* importing the lato font */
+
+/* universal values */
+*{
+    box-sizing: border-box;
+}
+body
+{
+    background-image: url('https://images.unsplash.com/photo-1467810563316-b5476525c0f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2069&q=80');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    font-family: 'Walter Turncoat', cursive;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+
+}
+
+/* inserting some rgb after the body making it darker */
+body::after{
+    content:'';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width:100%;
+    height:100%;
+    background-color: rgba(0,0,0, 0.5);
+
+}
+
+/* to deal with the text getting darker */
+body *{
+    z-index: 1;
+}
+
+h1{
+    font-size: 80px;
+    margin: -80px 0 40px;
+}
+
+
+
+.year{
+    font-size: 150px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    z-index:-1 !important;
+    opacity: 0.2;
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+}
+/* the contain class */
+.contain{
+    display: none;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.time{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+.time h2{
+    font-size: 30px;
+    margin: 0 0 5px;
+}
+
+img{
+    height: 80px;
+    width: 80px;
+}
+
+/* media queries */
+
+@media (max-width: 500px){
+    h1{
+        font-size: 40px;
+    }
+    .time{
+        margin: 5px;
+    }
+    .time h2{
+
+        font-size: 12px;
+        margin: 4;
+    }
+}
